@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Bangkit Capstone Projects</string>
+    <string name="our">Our</string>
+    <string name="foods">Foods</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
+    <string name="username">Username</string>
+    <string name="address">Address</string>
+    <string name="phone">08322323</string>
+    <string name="tangan">Our</string>
+    <string name="diatas">Foods</string>
+    <string name="make_your_event">Make Your Event</string>
+    <string name="event_title">Event Title</string>
+    <string name="description_event">Description Event</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="password">Password</string>
+    <string name="login_gmail">Login with G-Mail</string>
+    <string name="event_desription">Event Desription</string>
+    <string name="target_money">Target Money (IDR)</string>
+    <string name="target_people">Target People (Person)</string>
+    <string name="event_date">Event Date</string>
+    <string name="date">26-07-2018</string>
+    <string name="choose_image_for_poster">Choose Image For Poster</string>
+    <string name="target_food">Target Food (Portion)</string>
+    <string name="poster">Select Your Image for Poster</string>
+    <string name="username_detail">Username,</string>
+    <string name="donate_food">Donate Food (Portion)</string>
+    <string name="donate">Donate</string>
+    <string name="donate_money">Donate Money (IDR)</string>
+    <string name="donate_time">Donate Time</string>
+    <string name="target_food_portion">Target Food (Portion) :</string>
+    <string name="_1000">1000</string>
+    <string name="target_money_idr">Target Money (IDR) :</string>
+    <string name="target_people_person">Target People (Person) :</string>
+</resources>
