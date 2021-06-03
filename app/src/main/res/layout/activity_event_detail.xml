@@ -37,6 +37,28 @@
             app:layout_constraintTop_toBottomOf="@id/img_poster" />
 
         <TextView
+            android:id="@+id/tv_id_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/id_event"
+            android:visibility="invisible"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/img_poster" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/e_mail"
+            android:visibility="invisible"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="@id/tv_date"
+            app:layout_constraintTop_toBottomOf="@id/tv_id_event" />
+
+        <TextView
             android:id="@+id/tv_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -117,124 +139,32 @@
             app:layout_constraintStart_toEndOf="@id/tv_target_money"
             app:layout_constraintTop_toBottomOf="@id/tv_food" />
 
-        <TextView
-            android:id="@+id/tv_target_people"
-            android:layout_width="wrap_content"
+<!--        <TextView-->
+<!--            android:id="@+id/tv_target_people"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/target_people_person"-->
+<!--            android:textColor="@color/grey"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/tv_target_money" />-->
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/target_people_person"
-            android:textColor="@color/dark_brown"
-            android:textStyle="bold"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="10dp"
+            app:tabIndicatorColor="@color/light_brown"
+            app:tabTextColor="@drawable/state_tab"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_target_money" />
-
-        <TextView
-            android:id="@+id/tv_person"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/_1000"
-            android:textColor="@color/dark_brown"
-            android:textStyle="bold"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toEndOf="@id/tv_target_people"
-            app:layout_constraintTop_toBottomOf="@id/tv_money" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_food_layout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_target_people">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_food_event"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/donate_food"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/btn_donate_food"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/light_brown"
-            android:text="@string/donate"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/input_food_layout" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_money_layout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_donate_food">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_money_event"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/donate_money"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/btn_donate_money"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/light_brown"
-            android:text="@string/donate"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/input_money_layout" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_time_layout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_donate_money">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_time_event"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/donate_time"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/btn_donate_time"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/light_brown"
-            android:text="@string/donate"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/input_time_layout" />
+            app:layout_constraintTop_toBottomOf="@id/tab_layout" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

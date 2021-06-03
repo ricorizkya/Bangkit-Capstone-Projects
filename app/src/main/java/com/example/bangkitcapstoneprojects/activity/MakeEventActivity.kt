@@ -102,9 +102,7 @@ class MakeEventActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListene
                         saveEvent(it.toString())
                     }
                 }
-                .addOnFailureListener {
-
-                }
+                .addOnFailureListener { }
     }
 
     private fun saveEvent(image: String) {

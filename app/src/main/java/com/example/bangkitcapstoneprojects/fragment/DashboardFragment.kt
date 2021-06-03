@@ -2,20 +2,16 @@ package com.example.bangkitcapstoneprojects.fragment
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.TextUtils.replace
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.bangkitcapstoneprojects.R
 import com.example.bangkitcapstoneprojects.activity.MakeEventActivity
 import com.example.bangkitcapstoneprojects.adapter.EventAdapter
 import com.example.bangkitcapstoneprojects.databinding.FragmentDashboardBinding
 import com.example.bangkitcapstoneprojects.model.Eventt
-import com.example.bangkitcapstoneprojects.viewModel.EventViewModel
 import com.google.firebase.database.*
 
 class DashboardFragment : Fragment() {
