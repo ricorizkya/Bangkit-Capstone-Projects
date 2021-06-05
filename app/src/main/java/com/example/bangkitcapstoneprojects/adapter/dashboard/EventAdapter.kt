@@ -36,7 +36,11 @@ class EventAdapter(private val eventList: ArrayList<Eventt>): RecyclerView.Adapt
                     intent.putExtra(EventDetailActivity.EXTRA_MONEY, event.money)
                     intent.putExtra(EventDetailActivity.EXTRA_IMAGE, event.image)
                     intent.putExtra(FoodFragment.EXTRA_ID, event.id)
+                    intent.putExtra(FoodFragment.EXTRA_TITLE, event.title)
+                    intent.putExtra(FoodFragment.EXTRA_IMAGE, event.image)
                     intent.putExtra(MoneyFragment.EXTRA_ID, event.id)
+                    intent.putExtra(MoneyFragment.EXTRA_TITLE, event.title)
+                    intent.putExtra(MoneyFragment.EXTRA_IMAGE, event.image)
                     itemView.context.startActivity(intent)
                 }
             }

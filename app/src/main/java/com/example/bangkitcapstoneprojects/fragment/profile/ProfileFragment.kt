@@ -6,17 +6,26 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.annotation.StringRes
+import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
+import com.example.bangkitcapstoneprojects.R
 import com.example.bangkitcapstoneprojects.activity.LoginActivity
-import com.example.bangkitcapstoneprojects.adapter.EventAdapter
-import com.example.bangkitcapstoneprojects.databinding.FragmentHistoryBinding
+import com.example.bangkitcapstoneprojects.adapter.SectionPagerHistoryAdapter
+import com.example.bangkitcapstoneprojects.adapter.SectionPagerProfileAdapter
 import com.example.bangkitcapstoneprojects.databinding.FragmentProfileBinding
-import com.example.bangkitcapstoneprojects.viewModel.EventViewModel
+import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.auth.FirebaseAuth
 
 class ProfileFragment : Fragment() {
+
+    companion object {
+        @StringRes
+        private val TAB_TITLES = intArrayOf(
+                R.string.process,
+                R.string.done
+        )
+    }
 
     private lateinit var binding: FragmentProfileBinding
     private lateinit var auth: FirebaseAuth
@@ -38,25 +47,23 @@ class ProfileFragment : Fragment() {
             .load(currentUser?.photoUrl)
             .into(binding.imgAvatar)
 
+        viewPagerConfig()
+
         binding.imgLogout.setOnClickListener {
             auth.signOut()
             val intent = Intent(activity, LoginActivity::class.java)
             activity?.startActivity(intent)
             activity?.finish()
         }
+    }
 
-//        if (activity != null) {
-//            val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[EventViewModel::class.java]
-//            val event = viewModel.getEvent()
-//            val eventAdapter = EventAdapter()
-//            eventAdapter.setEvent(event)
-//
-//            with(binding.rvEvent) {
-//                layoutManager = LinearLayoutManager(context)
-//                setHasFixedSize(true)
-//                adapter = eventAdapter
-//            }
-//        }
+    private fun viewPagerConfig() {
+        val sectionPagerProfileAdapter = SectionPagerProfileAdapter(activity!!.applicationContext, activity!!)
+        val viewPager: ViewPager2 = binding.viewPager
+        viewPager.adapter = sectionPagerProfileAdapter
+        TabLayoutMediator(binding.tabLayout, viewPager) { tab, position ->
+            tab.text = resources.getString(TAB_TITLES[position])
+        }.attach()
     }
 
 }
