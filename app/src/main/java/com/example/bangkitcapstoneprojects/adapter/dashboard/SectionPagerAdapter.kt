@@ -1,13 +1,13 @@
-package com.example.bangkitcapstoneprojects.adapter
+package com.example.bangkitcapstoneprojects.adapter.dashboard
 
 import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.bangkitcapstoneprojects.fragment.FoodFragment
-import com.example.bangkitcapstoneprojects.fragment.MoneyFragment
+import com.example.bangkitcapstoneprojects.fragment.dashboard.FoodFragment
+import com.example.bangkitcapstoneprojects.fragment.dashboard.MoneyFragment
 
-class SectionPagerAdapter(private val context: Context, fragmentActivity: FragmentActivity)
+class SectionPagerProfileDetailAdapter(private val context: Context, fragmentActivity: FragmentActivity)
     :FragmentStateAdapter(fragmentActivity) {
 
     override fun getItemCount(): Int {

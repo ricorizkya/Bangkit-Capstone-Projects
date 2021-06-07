@@ -1,4 +1,4 @@
-package com.example.bangkitcapstoneprojects.fragment
+package com.example.bangkitcapstoneprojects.fragment.history
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,13 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.bangkitcapstoneprojects.adapter.HistoryFoodAdapter
+import com.example.bangkitcapstoneprojects.adapter.history.HistoryFoodAdapter
 import com.example.bangkitcapstoneprojects.databinding.FragmentHistoryFoodBinding
 import com.example.bangkitcapstoneprojects.model.DonateFood
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
-class HistoryFoodFragment : Fragment() {
+class FoodProfileFragment : Fragment() {
 
     private lateinit var binding: FragmentHistoryFoodBinding
     private lateinit var foodArrayList: ArrayList<DonateFood>
